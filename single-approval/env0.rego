@@ -4,7 +4,7 @@ package env0
 # title: Require Approval
 # description: require 1 approval
 pending[format(rego.metadata.rule())] {
-	print('got approvers', approvers)
+	print("got approvers", approvers)
 	count(approvers) < 1
 }
 
@@ -12,7 +12,7 @@ pending[format(rego.metadata.rule())] {
 # title: Allow if got approved
 # description: approved
 allow[format(rego.metadata.rule())] {
-	print('got approvers', approvers)
+	print("got approvers", approvers)
 	count(approvers) >= 1
 }
 
