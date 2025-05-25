@@ -22,7 +22,7 @@ warn[format(rego.metadata.rule())] {
 # METADATA
 # title: allow if no monthly cost
 # description: approve automatically if the plan no cost estimation
-allow[format(rego.metadata.rule())] {
+warn[format(rego.metadata.rule())] {
 	not has_key(input, "costEstimation")
 }
 
