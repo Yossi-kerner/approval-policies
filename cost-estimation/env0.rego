@@ -15,7 +15,7 @@ pending[format(rego.metadata.rule())] {
 # METADATA
 # title: allow if approved
 # description: allow after approval is given
-allow[format(rego.metadata.rule())] {
+warn[format(rego.metadata.rule())] {
 	count(input.approvers) >= 1
 }
 
